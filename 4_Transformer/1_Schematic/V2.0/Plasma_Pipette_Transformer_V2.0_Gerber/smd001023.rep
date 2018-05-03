@@ -7,9 +7,9 @@ Position  Width  Hgt/ID  Shape    Qty
    10      0.001       0    RND       1
    11      0.5       0    SQR       6
    12      2.25     1.2    RECT      4
-   13        1     0.75    RECT     12
    15        4       0    SQR       2
-   16      0.1       0    RND     216
+   16      0.1       0    RND     420
+   41      0.75       1    RECT     12
 
 
 
