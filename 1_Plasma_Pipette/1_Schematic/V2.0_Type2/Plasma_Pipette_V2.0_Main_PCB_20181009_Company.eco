@@ -1,0 +1,30 @@
+*PADS-ECO-V10.0-METRIC*
+
+*REMARK* -- Plasma_Pipette_V2.0_Main_PCB_20181009_Company.pcb -- Tue Oct 09 14:23:17 2018
+
+
+*DELPIN*
+R31.1    $$$3898
+Q3.1    $$$3898
+Q3.2    GND
+J2.1    $$$28352
+Q3.3    $$$28352
+
+*DELPART*
+Q3 PMBT2222
+*END*
+*PADS-ECO-V10.0-METRIC*
+
+*REMARK* -- Plasma_Pipette_V2.0_Main_PCB_20181009_Company.pcb -- Tue Oct 09 14:23:47 2018
+
+
+*DELPIN*
+R31.1    $$$3898
+Q3.1    $$$3898
+Q3.2    GND
+J2.1    $$$28352
+Q3.3    $$$28352
+
+*DELPART*
+Q3 PMBT2222
+*END*

@@ -1,0 +1,33 @@
+*PADS-ECO-V10.0-METRIC*
+
+*REMARK* -- Plasma_Pipette_V2.0_Main_PCB_20180731_Company.pcb -- Tue Oct 09 13:26:31 2018
+
+*END*
+*PADS-ECO-V10.0-METRIC*
+
+*REMARK* -- Plasma_Pipette_V2.0_Main_PCB_20180731_Company.pcb -- Tue Oct 09 13:27:06 2018
+
+
+*DELPIN*
+BATT.1    V_BATT
+BATT.2    GND
+
+*DELPART*
+BATT 053048-0210
+
+*PART*
+J5 053048-0610
+*END*
+*PADS-ECO-V10.0-METRIC*
+
+*REMARK* -- Plasma_Pipette_V2.0_Main_PCB_20180731_Company.pcb -- Tue Oct 09 13:27:33 2018
+
+
+*DELPART*
+J5 053048-0610
+*END*
+*PADS-ECO-V10.0-METRIC*
+
+*REMARK* -- Plasma_Pipette_V2.0_Main_PCB_20180731_Company.pcb -- Tue Oct 09 13:30:33 2018
+
+*END*
