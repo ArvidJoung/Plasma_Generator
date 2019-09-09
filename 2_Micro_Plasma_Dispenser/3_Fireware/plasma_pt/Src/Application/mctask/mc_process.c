@@ -192,9 +192,9 @@ void sendSTOPandPowerOFF(void)
 	xQueueSend(xOutEventTaskQueue,&cmd,taskNO_BLOCK);
 	vTaskDelay( 5);
 	
-    HAL_GPIO_WritePin(LED_HIGH_GPIO_Port, LED_HIGH_Pin, GPIO_PIN_SET); //2019.04.10 LED Off
-    HAL_GPIO_WritePin(LED_MED_GPIO_Port, LED_MED_Pin, GPIO_PIN_SET); //2019.04.10 LED Off
-    HAL_GPIO_WritePin(LED_LOW_GPIO_Port, LED_LOW_Pin, GPIO_PIN_SET); //2019.04.10 LED Off
+    HAL_GPIO_WritePin(LED_HIGH_GPIO_Port, LED_HIGH_Pin, GPIO_PIN_RESET); //2019.04.10 LED Off
+    HAL_GPIO_WritePin(LED_MED_GPIO_Port, LED_MED_Pin, GPIO_PIN_RESET); //2019.04.10 LED Off
+    HAL_GPIO_WritePin(LED_LOW_GPIO_Port, LED_LOW_Pin, GPIO_PIN_RESET); //2019.04.10 LED Off
 
     portEXIT_CRITICAL();
 

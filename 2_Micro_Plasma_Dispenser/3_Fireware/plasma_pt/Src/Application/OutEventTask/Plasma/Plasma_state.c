@@ -166,9 +166,9 @@ void PlasmaVolLedCtrl(uint8_t level)
     }
     else
     {
-        LED_OFF(LED_LOW);
-        LED_OFF(LED_MED);
-        LED_OFF(LED_HIGH);
+    	LED_OFF(LED_LOW);
+    	LED_OFF(LED_MED);
+    	LED_OFF(LED_HIGH);
     }
 }
 /*==================================================================================================
