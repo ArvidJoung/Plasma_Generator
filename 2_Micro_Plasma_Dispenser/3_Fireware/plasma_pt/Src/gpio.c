@@ -87,11 +87,11 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, STA_LED_B_Pin|STA_LED_G_Pin|STA_LED_R_Pin, GPIO_PIN_SET);  // 5/26 Arvid - initial LED OFF Status Setting
-  HAL_GPIO_WritePin(GPIOC, LED_LOW_Pin, GPIO_PIN_SET);  // 5/26 Arvid - initial LED OFF Status Setting
+  HAL_GPIO_WritePin(GPIOC, STA_LED_B_Pin|STA_LED_G_Pin|STA_LED_R_Pin, GPIO_PIN_RESET);  // 5/26 Arvid - initial LED OFF Status Setting
+  HAL_GPIO_WritePin(GPIOC, LED_LOW_Pin, GPIO_PIN_RESET);  // 5/26 Arvid - initial LED OFF Status Setting
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, PW_CTRL_Pin|CHG_CTRL_Pin|GAS_EN_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(GPIOB, LED_HIGH_Pin|LED_MED_Pin|OP_LED_Pin, GPIO_PIN_SET);    // 5/26 Arvid - initial LED OFF Status Setting
+  HAL_GPIO_WritePin(GPIOB, LED_HIGH_Pin|LED_MED_Pin|OP_LED_Pin, GPIO_PIN_RESET);    // 5/26 Arvid - initial LED OFF Status Setting
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(EN__8V_GPIO_Port, EN__8V_Pin, GPIO_PIN_RESET);
 
@@ -214,27 +214,27 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin, portBASE_TYPE *xHigherPriorityTas
     		break;
 
 		case KEY_OP_Pin:
-      if( HAL_GPIO_ReadPin(USB_DET_GPIO_Port,USB_DET_Pin) == GPIO_PIN_RESET)    // 6/7 Arvid - 異⑹쟾以� Plasma On Key disable
-      {
+      //if( HAL_GPIO_ReadPin(USB_DET_GPIO_Port,USB_DET_Pin) == GPIO_PIN_RESET)    // 6/7 Arvid - 異⑹쟾以� Plasma On Key disable
+      //{
 			  cmd.cmd = INEVENT_OPERATE_SW_EVT;
 			  xQueueSendFromISR(xInEventTaskQueue,&cmd,xHigherPriorityTaskWoken);
-      }
+      //}
 			break;
 
 		case KEY_DOWN_Pin:
-      if(HAL_GPIO_ReadPin(KEY_OP_GPIO_Port,KEY_OP_Pin) == GPIO_PIN_SET)     // 6/7 Arvid Plasma Off �긽�깭�뿉�꽌留� DOWN Key �룞�옉
-      {
+     // if(HAL_GPIO_ReadPin(KEY_OP_GPIO_Port,KEY_OP_Pin) == GPIO_PIN_SET)     // 6/7 Arvid Plasma Off �긽�깭�뿉�꽌留� DOWN Key �룞�옉
+      //{
 			  cmd.cmd = INEVENT_KEY_DOWN_KEY_PRESSED_EVT;
 			  xQueueSendFromISR(xInEventTaskQueue,&cmd,xHigherPriorityTaskWoken);
-      }
+      //}
 			break;
 
 		case KEY_UP_Pin:
-      if(HAL_GPIO_ReadPin(KEY_OP_GPIO_Port,KEY_OP_Pin) == GPIO_PIN_SET)     // 6/7 Arvid Plasma Off �긽�깭�뿉�꽌留� UP Key �룞�옉
-      {    
+     // if(HAL_GPIO_ReadPin(KEY_OP_GPIO_Port,KEY_OP_Pin) == GPIO_PIN_SET)     // 6/7 Arvid Plasma Off �긽�깭�뿉�꽌留� UP Key �룞�옉
+     // {
 			  cmd.cmd = INEVENT_KEY_UP_KEY_PRESSED_EVT;
 			  xQueueSendFromISR(xInEventTaskQueue,&cmd,xHigherPriorityTaskWoken);
-      }
+     // }
 			break;
 
 		case GND_JACK_Pin:
