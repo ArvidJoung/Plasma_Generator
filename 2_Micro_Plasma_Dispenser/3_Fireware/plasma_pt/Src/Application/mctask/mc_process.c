@@ -154,7 +154,7 @@ boolean check_pwroffstate(void)
 
     if( HAL_GPIO_ReadPin(KEY_PWR_GPIO_Port,KEY_PWR_Pin) == GPIO_PIN_SET)
     {
-        if( pwrKeyCount++ > 4) // 3sec
+        if( pwrKeyCount++ > 3) // 3sec
         {
             return TRUE;
         }

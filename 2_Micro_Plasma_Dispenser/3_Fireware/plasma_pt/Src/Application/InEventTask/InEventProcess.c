@@ -226,18 +226,6 @@ void InEventBattResultReport(uint8_t adc_chan)
     {
         ProcessBattADCval(INEVENT_BATT_VAL_EVT, BatteryStatus);
     }
-    /*
-    else if (adc_chan == ADC_BATT_TEMP)
-    {
-        ProcessBattADCval(INEVENT_BATT_TEMP_EVT, BatteryTemp);
-    }
-    */
-    /*
-    else if (adc_chan == ADC_CHARGE)
-    {
-        ProcessBattADCval(INEVENT_CHARGE_STATUS_ADC_EVT, ChargingStatus);
-    }
-    */
 }
 
 /*===========================================================================
@@ -250,128 +238,24 @@ void ProcessBattADCval(uint16_t command, uint8_t adc_val )
 {
     switch(command)
     {
-/*        case INEVENT_BATT_TEMP_EVT:
-            {
-                uint8_t low_limit, high_limit;
-                
-                if(IsCharging == 1)
-                {
-                    low_limit = BATT_TEMP_CHARGE_LOW_LIMIT;
-                    high_limit = BATT_TEMP_CHARGE_HIGH_LIMIT;
-                }
-                else
-                {
-                    low_limit = BATT_TEMP_DISCHARGE_LOW_LIMIT;
-                    high_limit = BATT_TEMP_DISCHARGE_HIGH_LIMIT;
-                }
-
-                {
-                    if( (adc_val < low_limit) || (adc_val > high_limit))
-                    {
-                        DBGERR(INEVENT,"Battery Range out of bound Error!!!\r\n");
-    					sendMcCommand(MC_POWEROFF_CMD_F);
-                    }
-                }
-
-            }
-            break;
-*/
-
 
         case INEVENT_BATT_VAL_EVT:
-        	if(IsExtPwrInState == FALSE)
-			{
+        	//if(IsExtPwrInState == FALSE)
+			//{
 				if(adc_val < BATT_CUTOFF_VOLT_VAL)
 				{
 					DBGERR(INEVENT,"Battery Cutoff Event occurred!!!\r\n");
 					sendMcCommand(MC_POWEROFF_CMD_F);
 				}
-				else if(adc_val < BATT_LOW_VOLT_VAL)
+				else if(adc_val > BATT_FULL_VOLT_VAL)
 				{
-					DBGERR(INEVENT,"Low Battery Event occurred!!!\r\n");
-					sendMcCommand(MC_LOWBATT_OCCURR_EVT);
+					DBGERR(INEVENT,"Battery Cutoff Event occurred!!!\r\n");
+					sendMcCommand(MC_POWEROFF_CMD_F);
 				}
-				IsCharging = 0;
-			}
-        	else if(IsExtPwrInState == TRUE)
-        	{
-                if( adc_val < BATT_FULL_VOLT_VAL)  // charging....
-                {
-					if(IsCharging == 0)
-					{
-						DBGHI(INEVENT,"Charging Started !!!\r\n");
-						sendMcCommand(MC_CHARGING_STARTED_EVT);
-						IsCharging = 1;
-						// TODO
-					}
-                }
-                else if(adc_val >= BATT_FULL_VOLT_VAL) //charge complete
-                {
-					if(IsCharging == 1)
-					{
-						DBGHI(INEVENT,"Charge Complete !!!\r\n");
-						sendMcCommand(MC_FULL_CHARGE_EVT);
-					}
-					else
-					{
-						DBGHI(INEVENT,"Charging Started !!!\r\n");
-						sendMcCommand(MC_CHARGING_STARTED_EVT);
-					}
-					IsCharging = 1;
-                }
-        	}
-            break;
-/*
-        case INEVENT_CHARGE_STATUS_ADC_EVT:
-            
-            {
-                if( adc_val <= CHARGEADC_LOW)  // charging....
-                {
-                    if(IsExtPwrInState == TRUE)
-                    {
-                        if(IsCharging != 1)
-                        {
-                            DBGHI(INEVENT,"Charging Started !!!\r\n");
-                            sendMcCommand(MC_CHARGING_STARTED_EVT);
-                            
-                            // TODO
-                        }
-                        IsCharging = 1;
-                    }
-                }
-                else if(adc_val >= CHARGEADC_HIGH) //charge complete
-                {
-                    if(IsExtPwrInState == TRUE)
-                    {
-                        if(IsCharging != 1)  // 2019.01.22 Arvid Full Charging detect error
-                        {
-                            DBGHI(INEVENT,"Charge Complete !!!\r\n");
-                            sendMcCommand(MC_FULL_CHARGE_EVT);
-                        }
-                    }        
-                    else
-                    {
-                        if(IsCharging == 1) 
-                        {
-                            DBGHI(INEVENT,"Charging Stopped !!!\r\n");
-                            sendMcCommand(MC_CHARGING_STOPED_EVT);
-                        }
-                    }
-                    IsCharging = 0;
-                }
-                else //  CHARGEADC_LOW < adc_val < CHARGEADC_HIGH // No USB
-                {
-                    if(IsCharging == 1) 
-                    {
-                        DBGHI(INEVENT,"Charging Stopped !!!\r\n");
-                        sendMcCommand(MC_CHARGING_STOPED_EVT);
-                    }
-                    IsCharging = 0;
-                }
-            }
+			//}
 
             break;
-*/
+
         default:
             break;
     }

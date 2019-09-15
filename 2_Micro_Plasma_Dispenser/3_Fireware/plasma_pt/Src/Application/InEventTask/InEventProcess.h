@@ -36,9 +36,9 @@ Author          Date            Number          Description of Changes
 #define BATT_TEMP_DISCHARGE_LOW_LIMIT   59
 #define BATT_TEMP_DISCHARGE_HIGH_LIMIT  226
 
-#define BATT_CUTOFF_VOLT_VAL            194//191
-#define BATT_LOW_VOLT_VAL               200//197
-#define BATT_FULL_VOLT_VAL              238//245	2019.05.15 Arvid Full charge 4.1V set
+#define BATT_CUTOFF_VOLT_VAL            155  // Vext Lower limit :4V
+#define BATT_LOW_VOLT_VAL               200
+#define BATT_FULL_VOLT_VAL              213  // Vext Upper limit :5.5V
 
 #define CHARGEADC_LOW   10
 #define CHARGEADC_HIGH  150
