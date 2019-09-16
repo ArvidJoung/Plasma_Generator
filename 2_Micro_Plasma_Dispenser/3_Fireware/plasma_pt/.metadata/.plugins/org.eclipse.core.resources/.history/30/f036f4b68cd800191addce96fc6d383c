@@ -245,12 +245,12 @@ void ProcessBattADCval(uint16_t command, uint8_t adc_val )
 				if(adc_val < BATT_CUTOFF_VOLT_VAL)
 				{
 					DBGERR(INEVENT,"Battery Cutoff Event occurred!!!\r\n");
-					//sendMcCommand(MC_POWEROFF_CMD_F);
+					sendMcCommand(MC_POWEROFF_CMD_F);
 				}
 				else if(adc_val > BATT_FULL_VOLT_VAL)
 				{
 					DBGERR(INEVENT,"Battery Cutoff Event occurred!!!\r\n");
-					//sendMcCommand(MC_POWEROFF_CMD_F);
+					sendMcCommand(MC_POWEROFF_CMD_F);
 				}
 			//}
 

@@ -214,11 +214,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin, portBASE_TYPE *xHigherPriorityTas
     		break;
 
 		case KEY_OP_Pin:
-      //if( HAL_GPIO_ReadPin(USB_DET_GPIO_Port,USB_DET_Pin) == GPIO_PIN_RESET)    // 6/7 Arvid - 異⑹쟾以� Plasma On Key disable
-      //{
 			  cmd.cmd = INEVENT_OPERATE_SW_EVT;
 			  xQueueSendFromISR(xInEventTaskQueue,&cmd,xHigherPriorityTaskWoken);
-      //}
 			break;
 
 		case KEY_DOWN_Pin:

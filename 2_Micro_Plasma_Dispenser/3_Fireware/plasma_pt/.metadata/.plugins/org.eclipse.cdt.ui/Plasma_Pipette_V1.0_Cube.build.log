@@ -1,4 +1,4 @@
-14:29:24 **** Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
+23:17:33 **** Incremental Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
 make all 
 Building file: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
 Invoking: MCU GCC Compiler
@@ -404,8 +404,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Plasma_Pipette_V1.0_Cube.elf" "Plasma_Pipette_V1.0_Cube.bin"
 arm-none-eabi-size "Plasma_Pipette_V1.0_Cube.elf"
    text	   data	    bss	    dec	    hex	filename
-  42192	    532	  13548	  56272	   dbd0	Plasma_Pipette_V1.0_Cube.elf
+  41856	    532	  13548	  55936	   da80	Plasma_Pipette_V1.0_Cube.elf
  
 
-14:29:55 Build Finished (took 31s.173ms)
+23:18:04 Build Finished (took 30s.868ms)
 
