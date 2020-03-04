@@ -113,12 +113,22 @@ uint8_t InEventCheckDebounce(void)
                 if(isPlasmaOperate == FALSE)
                 {
                     isPlasmaOperate = TRUE;
+                    isOpSWKeyChecking = FALSE; 	// Arvid 2019.12.15
                     sendMcCommand(MC_OPERATE_ON_F);
                     DBGHI(INEVENT,"Operate Switch on state !!!\r\n");
+                }
+                //Arvid 2019.12.15
+                else
+                {
+                    isPlasmaOperate = FALSE;
+                    isOpSWKeyChecking = FALSE;
+                    sendMcCommand(MC_OPERATE_OFF_F);
+                    DBGHI(INEVENT,"Operate Switch off state !!!\r\n");
                 }
             }
             isTimerRequired++;                
         }
+        /*
         else
         {
             OpKeyUpCount++;
@@ -139,7 +149,7 @@ uint8_t InEventCheckDebounce(void)
                 isTimerRequired++;    
             }
 
-        }
+        }*/
     }
 
     if(isDownKeyChecking) 
