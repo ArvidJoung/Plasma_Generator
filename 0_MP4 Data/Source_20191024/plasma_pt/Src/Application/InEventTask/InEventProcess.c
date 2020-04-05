@@ -226,18 +226,15 @@ void InEventBattResultReport(uint8_t adc_chan)
     {
         ProcessBattADCval(INEVENT_BATT_VAL_EVT, BatteryStatus);
     }
-    /*
     else if (adc_chan == ADC_BATT_TEMP)
     {
         ProcessBattADCval(INEVENT_BATT_TEMP_EVT, BatteryTemp);
     }
-    */
-    /*
     else if (adc_chan == ADC_CHARGE)
     {
         ProcessBattADCval(INEVENT_CHARGE_STATUS_ADC_EVT, ChargingStatus);
     }
-    */
+    
 }
 
 /*===========================================================================
@@ -250,7 +247,7 @@ void ProcessBattADCval(uint16_t command, uint8_t adc_val )
 {
     switch(command)
     {
-/*        case INEVENT_BATT_TEMP_EVT:
+        case INEVENT_BATT_TEMP_EVT:
             {
                 uint8_t low_limit, high_limit;
                 
@@ -265,63 +262,30 @@ void ProcessBattADCval(uint16_t command, uint8_t adc_val )
                     high_limit = BATT_TEMP_DISCHARGE_HIGH_LIMIT;
                 }
 
-                {
+                /*{
                     if( (adc_val < low_limit) || (adc_val > high_limit))
                     {
                         DBGERR(INEVENT,"Battery Range out of bound Error!!!\r\n");
     					sendMcCommand(MC_POWEROFF_CMD_F);
                     }
-                }
+                }*/
 
             }
             break;
-*/
-
 
         case INEVENT_BATT_VAL_EVT:
-        	if(IsExtPwrInState == FALSE)
-			{
-				if(adc_val < BATT_CUTOFF_VOLT_VAL)
-				{
-					DBGERR(INEVENT,"Battery Cutoff Event occurred!!!\r\n");
-					sendMcCommand(MC_POWEROFF_CMD_F);
-				}
-				else if(adc_val < BATT_LOW_VOLT_VAL)
-				{
-					DBGERR(INEVENT,"Low Battery Event occurred!!!\r\n");
-					sendMcCommand(MC_LOWBATT_OCCURR_EVT);
-				}
-				IsCharging = 0;
-			}
-        	else if(IsExtPwrInState == TRUE)
-        	{
-                if( adc_val < BATT_FULL_VOLT_VAL)  // charging....
-                {
-					if(IsCharging == 0)
-					{
-						DBGHI(INEVENT,"Charging Started !!!\r\n");
-						sendMcCommand(MC_CHARGING_STARTED_EVT);
-						IsCharging = 1;
-						// TODO
-					}
-                }
-                else if(adc_val >= BATT_FULL_VOLT_VAL) //charge complete
-                {
-					if(IsCharging == 1)
-					{
-						DBGHI(INEVENT,"Charge Complete !!!\r\n");
-						sendMcCommand(MC_FULL_CHARGE_EVT);
-					}
-					else
-					{
-						DBGHI(INEVENT,"Charging Started !!!\r\n");
-						sendMcCommand(MC_CHARGING_STARTED_EVT);
-					}
-					IsCharging = 1;
-                }
-        	}
+            if( (IsExtPwrInState == FALSE) && (adc_val < BATT_CUTOFF_VOLT_VAL))
+            {
+                DBGERR(INEVENT,"Battery Cutoff Event occurred!!!\r\n");
+                sendMcCommand(MC_POWEROFF_CMD_F);
+            }
+            else if( (IsExtPwrInState == FALSE) && (adc_val < BATT_LOW_VOLT_VAL))
+            {
+                DBGERR(INEVENT,"Low Battery Event occurred!!!\r\n");
+                sendMcCommand(MC_LOWBATT_OCCURR_EVT);
+            }
             break;
-/*
+
         case INEVENT_CHARGE_STATUS_ADC_EVT:
             
             {
@@ -369,9 +333,8 @@ void ProcessBattADCval(uint16_t command, uint8_t adc_val )
                     IsCharging = 0;
                 }
             }
-
             break;
-*/
+
         default:
             break;
     }

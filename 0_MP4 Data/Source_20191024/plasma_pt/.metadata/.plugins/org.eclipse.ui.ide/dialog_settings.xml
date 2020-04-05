@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\WORK\Project\1_Plasma_Pipette\0_MP4 Data\Source_20191024\plasma_pt"/>
 		<item value="C:\WORK\Project\3_Source\Test Sourse\V2.0_Source_20190403\plasma_pt"/>
 	</list>
 	<section name="CleanDialogSettings">

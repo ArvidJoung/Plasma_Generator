@@ -38,7 +38,7 @@ Author          Date            Number          Description of Changes
 
 #define BATT_CUTOFF_VOLT_VAL            194//191
 #define BATT_LOW_VOLT_VAL               200//197
-#define BATT_FULL_VOLT_VAL              238//245	2019.05.15 Arvid Full charge 4.1V set
+#define BATT_FULL_VOLT_VAL              240//245
 
 #define CHARGEADC_LOW   10
 #define CHARGEADC_HIGH  150

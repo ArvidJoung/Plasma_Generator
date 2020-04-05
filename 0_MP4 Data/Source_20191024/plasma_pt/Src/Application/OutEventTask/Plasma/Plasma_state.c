@@ -64,8 +64,7 @@ platforms. If not, indicate specific reasons why is it not portable.
  LOCAL MACROS
 ==================================================================================================*/
 #define PLASMA_SPAN_TIME_PWM_MSEC 10
-//#define PLASMA_STEP_TIME_PWM_MSEC 2 // 6/5 Arvid - Level Step 2msec fix
-#define PLASMA_STEP_TIME_PWM_MSEC 1 // 2019.04.03 Arvid - Level Step 1msec - Femto request
+#define PLASMA_STEP_TIME_PWM_MSEC 2 // 6/5 Arvid - Level Step 2msec濡� fix
 
 #define TIM1_OUTPUT_CLK				(70000)	//6/5 Arvid - TIM1 output clock = 70KHz
 #define PLASMA_FREQ					((TIM1_COUNTER_CLK/TIM1_OUTPUT_CLK)-1)		// TIM1 Period
@@ -104,8 +103,7 @@ uint32_t getPlasmaVolLevel()
 boolean calcPlasmaOnOffTime()
 {
     //PlasmaOnTime = (PLASMA_SPAN_TIME_PWM_MSEC/PLASMA_STEP_TIME_PWM_MSEC)*getPlasmaVolLevel();
-    //PlasmaOnTime = PLASMA_STEP_TIME_PWM_MSEC*(PlasmaLevel+2);  // 6/5 Arvid - Plasma On time 4msec / 6msec / 8msec
-    PlasmaOnTime = PLASMA_STEP_TIME_PWM_MSEC*(PlasmaLevel+3);  // 2019.04.03 Arvid - Plasma On time 3msec / 4msec / 5msec
+    PlasmaOnTime = PLASMA_STEP_TIME_PWM_MSEC*(PlasmaLevel+2);  // 6/5 Arvid - Plasma On time 4msec / 6msec / 8msec
     
     if(PlasmaOnTime > PLASMA_SPAN_TIME_PWM_MSEC) 
         PlasmaOnTime = PLASMA_SPAN_TIME_PWM_MSEC;
@@ -253,7 +251,7 @@ boolean CheckIsPlasmaCmd(command_type *command)
                 calcPlasmaOnOffTime();
                 
                 GPIO_ENABLE(GAS_EN);
-                //vTaskDelay( 1000); // 2019.04.03 Arvid - Plasma On delay 0.5sec
+                vTaskDelay( 5000); // 2019.01.17 Arvid - Plasma On delay 5sec
                                 
                 timer_set_timer(xplasmaOnTimer,PlasmaOnTime);
                 Plasma_Start();

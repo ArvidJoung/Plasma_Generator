@@ -191,19 +191,12 @@ void sendSTOPandPowerOFF(void)
 	cmd.cmd = OUTEVENT_TASK_STOP_F;
 	xQueueSend(xOutEventTaskQueue,&cmd,taskNO_BLOCK);
 	vTaskDelay( 5);
-	
-    HAL_GPIO_WritePin(LED_HIGH_GPIO_Port, LED_HIGH_Pin, GPIO_PIN_SET); //2019.04.10 LED Off
-    HAL_GPIO_WritePin(LED_MED_GPIO_Port, LED_MED_Pin, GPIO_PIN_SET); //2019.04.10 LED Off
-    HAL_GPIO_WritePin(LED_LOW_GPIO_Port, LED_LOW_Pin, GPIO_PIN_SET); //2019.04.10 LED Off
 
     portEXIT_CRITICAL();
 
 	vTaskDelay( 500); // Delay 3sec
-
+	
     HAL_GPIO_WritePin(PW_CTRL_GPIO_Port, PW_CTRL_Pin, GPIO_PIN_RESET);
-
-
-
     // Power OFF
 
 }
@@ -232,7 +225,7 @@ void PlasmaVolSet(uint16_t command)
     }
     else if(command == MC_UP_KEY_PRESSED_F)
     {
-        if(plasmaLevel < 2)     // 6/7 Arvid - High level�뿉�꽌 UP Key input disable
+        if(plasmaLevel < 2)     // 6/7 Arvid - High level에서 UP Key input disable
         {
             plasmaLevel++;
             //plasmaLevel %= PLASMA_LEVEL_MAX;
