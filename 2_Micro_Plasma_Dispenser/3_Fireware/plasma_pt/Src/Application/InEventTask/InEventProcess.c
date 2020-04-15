@@ -113,22 +113,24 @@ uint8_t InEventCheckDebounce(void)
                 if(isPlasmaOperate == FALSE)
                 {
                     isPlasmaOperate = TRUE;
-                    isOpSWKeyChecking = FALSE; 	// Arvid 2019.12.15
+                    //isOpSWKeyChecking = FALSE; 	// Arvid 2020.04.05 Plasma Key 원복
                     sendMcCommand(MC_OPERATE_ON_F);
                     DBGHI(INEVENT,"Operate Switch on state !!!\r\n");
                 }
-                //Arvid 2019.12.15
+                //Arvid 2020.04.05 Plasma Key 원복
+                /*
                 else
                 {
                     isPlasmaOperate = FALSE;
                     isOpSWKeyChecking = FALSE;
                     sendMcCommand(MC_OPERATE_OFF_F);
                     DBGHI(INEVENT,"Operate Switch off state !!!\r\n");
-                }
+                }*/
             }
             isTimerRequired++;                
         }
-        /*
+        //2020.04.05 Plasma Key 원복
+
         else
         {
             OpKeyUpCount++;
@@ -149,7 +151,7 @@ uint8_t InEventCheckDebounce(void)
                 isTimerRequired++;    
             }
 
-        }*/
+        }
     }
 
     if(isDownKeyChecking) 

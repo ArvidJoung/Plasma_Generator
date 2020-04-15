@@ -3010,3 +3010,119 @@ make: Nothing to be done for 'all'.
 17:06:56 **** Incremental Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
 make all 
 make: Nothing to be done for 'all'.
+10:09:18 **** Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
+make all 
+Building file: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/InEventTask/InEventProcess.c
+Invoking: MCU GCC Compiler
+C:\WORK\Project\1_Plasma_Pipette\2_Micro_Plasma_Dispenser\3_Fireware\plasma_pt\Plasma_Pipette_V1.0_Cube\SW4STM32\Plasma_Pipette_V1.0_Cube\Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F070xB -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/CliTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/common" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/InEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/mctask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/taskcfg" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Buzzer" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/ChargeState" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/Application/InEventTask/InEventProcess.d" -MT"Application/User/Application/InEventTask/InEventProcess.o" -o "Application/User/Application/InEventTask/InEventProcess.o" "C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/InEventTask/InEventProcess.c"
+Finished building: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/InEventTask/InEventProcess.c
+ 
+Building target: Plasma_Pipette_V1.0_Cube.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F070RBTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Plasma_Pipette_V1.0_Cube.elf" @"objects.list"   -lm
+Finished building target: Plasma_Pipette_V1.0_Cube.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Plasma_Pipette_V1.0_Cube.elf" "Plasma_Pipette_V1.0_Cube.bin"
+arm-none-eabi-size "Plasma_Pipette_V1.0_Cube.elf"
+   text	   data	    bss	    dec	    hex	filename
+  41856	    532	  13548	  55936	   da80	Plasma_Pipette_V1.0_Cube.elf
+ 
+10:13:21 **** Incremental Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
+make all 
+Building file: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
+Invoking: MCU GCC Compiler
+C:\WORK\Project\1_Plasma_Pipette\2_Micro_Plasma_Dispenser\3_Fireware\plasma_pt\Plasma_Pipette_V1.0_Cube\SW4STM32\Plasma_Pipette_V1.0_Cube\Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F070xB -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/CliTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/common" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/InEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/mctask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/taskcfg" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Buzzer" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/ChargeState" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/Application/OutEventTask/Plasma/Plasma_state.d" -MT"Application/User/Application/OutEventTask/Plasma/Plasma_state.o" -o "Application/User/Application/OutEventTask/Plasma/Plasma_state.o" "C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c"
+C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c: In function 'getPlasmaVolLevel':
+C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c:98:21: warning: division by zero [-Wdiv-by-zero]
+  PlasmaADCStep = 255/(PLASMA_STEP_TIME_PWM_MSEC-1);
+                     ^
+Finished building: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
+ 
+Building target: Plasma_Pipette_V1.0_Cube.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F070RBTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Plasma_Pipette_V1.0_Cube.elf" @"objects.list"   -lm
+Finished building target: Plasma_Pipette_V1.0_Cube.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Plasma_Pipette_V1.0_Cube.elf" "Plasma_Pipette_V1.0_Cube.bin"
+arm-none-eabi-size "Plasma_Pipette_V1.0_Cube.elf"
+   text	   data	    bss	    dec	    hex	filename
+  41856	    532	  13548	  55936	   da80	Plasma_Pipette_V1.0_Cube.elf
+ 
+10:16:15 **** Incremental Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
+make all 
+Building file: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
+Invoking: MCU GCC Compiler
+C:\WORK\Project\1_Plasma_Pipette\2_Micro_Plasma_Dispenser\3_Fireware\plasma_pt\Plasma_Pipette_V1.0_Cube\SW4STM32\Plasma_Pipette_V1.0_Cube\Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F070xB -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/CliTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/common" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/InEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/mctask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/taskcfg" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Buzzer" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/ChargeState" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/Application/OutEventTask/Plasma/Plasma_state.d" -MT"Application/User/Application/OutEventTask/Plasma/Plasma_state.o" -o "Application/User/Application/OutEventTask/Plasma/Plasma_state.o" "C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c"
+C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c: In function 'getPlasmaVolLevel':
+C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c:98:21: warning: division by zero [-Wdiv-by-zero]
+  PlasmaADCStep = 255/(PLASMA_STEP_TIME_PWM_MSEC-1);
+                     ^
+Finished building: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
+ 
+Building target: Plasma_Pipette_V1.0_Cube.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F070RBTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Plasma_Pipette_V1.0_Cube.elf" @"objects.list"   -lm
+Finished building target: Plasma_Pipette_V1.0_Cube.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Plasma_Pipette_V1.0_Cube.elf" "Plasma_Pipette_V1.0_Cube.bin"
+arm-none-eabi-size "Plasma_Pipette_V1.0_Cube.elf"
+   text	   data	    bss	    dec	    hex	filename
+  41856	    532	  13548	  55936	   da80	Plasma_Pipette_V1.0_Cube.elf
+ 
+10:17:30 **** Incremental Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
+make all 
+Building file: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
+Invoking: MCU GCC Compiler
+C:\WORK\Project\1_Plasma_Pipette\2_Micro_Plasma_Dispenser\3_Fireware\plasma_pt\Plasma_Pipette_V1.0_Cube\SW4STM32\Plasma_Pipette_V1.0_Cube\Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F070xB -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/CliTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/common" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/InEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/mctask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/taskcfg" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Buzzer" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/ChargeState" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/Application/OutEventTask/Plasma/Plasma_state.d" -MT"Application/User/Application/OutEventTask/Plasma/Plasma_state.o" -o "Application/User/Application/OutEventTask/Plasma/Plasma_state.o" "C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c"
+C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c: In function 'getPlasmaVolLevel':
+C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c:98:21: warning: division by zero [-Wdiv-by-zero]
+  PlasmaADCStep = 255/(PLASMA_STEP_TIME_PWM_MSEC-1);
+                     ^
+Finished building: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
+ 
+Building target: Plasma_Pipette_V1.0_Cube.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F070RBTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Plasma_Pipette_V1.0_Cube.elf" @"objects.list"   -lm
+Finished building target: Plasma_Pipette_V1.0_Cube.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Plasma_Pipette_V1.0_Cube.elf" "Plasma_Pipette_V1.0_Cube.bin"
+arm-none-eabi-size "Plasma_Pipette_V1.0_Cube.elf"
+   text	   data	    bss	    dec	    hex	filename
+  41856	    532	  13548	  55936	   da80	Plasma_Pipette_V1.0_Cube.elf
+ 
+10:19:22 **** Incremental Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
+make all 
+Building file: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
+Invoking: MCU GCC Compiler
+C:\WORK\Project\1_Plasma_Pipette\2_Micro_Plasma_Dispenser\3_Fireware\plasma_pt\Plasma_Pipette_V1.0_Cube\SW4STM32\Plasma_Pipette_V1.0_Cube\Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F070xB -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/CliTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/common" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/InEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/mctask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/taskcfg" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Buzzer" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/ChargeState" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/include" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS" -I"C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/Application/OutEventTask/Plasma/Plasma_state.d" -MT"Application/User/Application/OutEventTask/Plasma/Plasma_state.o" -o "Application/User/Application/OutEventTask/Plasma/Plasma_state.o" "C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c"
+C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c: In function 'getPlasmaVolLevel':
+C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c:98:21: warning: division by zero [-Wdiv-by-zero]
+  PlasmaADCStep = 255/(PLASMA_STEP_TIME_PWM_MSEC-1);
+                     ^
+Finished building: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
+ 
+Building target: Plasma_Pipette_V1.0_Cube.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F070RBTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Plasma_Pipette_V1.0_Cube.elf" @"objects.list"   -lm
+Finished building target: Plasma_Pipette_V1.0_Cube.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Plasma_Pipette_V1.0_Cube.elf" "Plasma_Pipette_V1.0_Cube.bin"
+arm-none-eabi-size "Plasma_Pipette_V1.0_Cube.elf"
+   text	   data	    bss	    dec	    hex	filename
+  41856	    532	  13548	  55936	   da80	Plasma_Pipette_V1.0_Cube.elf
+ 
