@@ -1,4 +1,4 @@
-10:19:22 **** Incremental Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
+10:37:53 **** Incremental Build of configuration Debug for project Plasma_Pipette_V1.0_Cube ****
 make all 
 Building file: C:/WORK/Project/1_Plasma_Pipette/2_Micro_Plasma_Dispenser/3_Fireware/plasma_pt/Src/Application/OutEventTask/Plasma/Plasma_state.c
 Invoking: MCU GCC Compiler
@@ -20,8 +20,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Plasma_Pipette_V1.0_Cube.elf" "Plasma_Pipette_V1.0_Cube.bin"
 arm-none-eabi-size "Plasma_Pipette_V1.0_Cube.elf"
    text	   data	    bss	    dec	    hex	filename
-  41856	    532	  13548	  55936	   da80	Plasma_Pipette_V1.0_Cube.elf
+  41872	    532	  13548	  55952	   da90	Plasma_Pipette_V1.0_Cube.elf
  
 
-10:19:25 Build Finished (took 3s.39ms)
+10:37:56 Build Finished (took 2s.986ms)
 

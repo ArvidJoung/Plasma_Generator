@@ -253,7 +253,7 @@ boolean CheckIsPlasmaCmd(command_type *command)
                 calcPlasmaOnOffTime();
                 
                 GPIO_ENABLE(GAS_EN);
-                //vTaskDelay( 1000); // 2019.04.03 Arvid - Plasma On delay 0.5sec
+                vTaskDelay( 1000); // 2020.04.15 Arvid - Plasma On delay 1.0sec
                                 
                 timer_set_timer(xplasmaOnTimer,PlasmaOnTime);
                 Plasma_Start();
